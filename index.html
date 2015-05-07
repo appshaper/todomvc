@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Template • TodoMVC</title>
+		<link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
+	</head>
+	<body>
+		<script src="node_modules/todomvc-common/base.js"></script>
+
+		<!-- Distribution files here. Uncomment in production. ↓ -->
+		<!--<script src="dist/modules.js"></script>-->
+
+		<!-- Require.js include below. Remove in production. ↓ -->
+		<script src="node_modules/requirejs/require.js"></script>
+
+		<!-- App configuration an initialization. ↓ -->
+		<script>
+			// Configure Require.js so it knows the base url for modules and the paths to Appshaper
+			// and Handlebars.
+			requirejs.config({
+				baseUrl: 'js',
+				paths: {
+					appshaper: '../node_modules/appshaper/src/modules',
+					handlebars: '../node_modules/handlebars/dist/handlebars.min'
+				}
+			});
+
+			// Require templates and helpers and fire up the app.
+			require([
+				'app',
+				'templates',
+				'helpers'
+			], function (
+				App
+			) {
+				'use strict';
+				App();
+			});
+		</script>
+	</body>
+</html>

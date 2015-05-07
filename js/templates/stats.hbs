@@ -1,0 +1,15 @@
+<span id="todo-count" class="todo-count"><strong>{{remaining}}</strong> {{#ifCond remaining '===' 1}}item{{else}}items{{/ifCond}} left</span>
+<ul class="filters">
+    <li>
+        <a {{#ifCond page '===' '/'}}class="selected"{{/ifCond}} href="#/">All</a>
+    </li>
+    <li>
+        <a {{#ifCond page '===' 'active'}}class="selected"{{/ifCond}} href="#/active">Active</a>
+    </li>
+    <li>
+        <a {{#ifCond page '===' 'completed'}}class="selected"{{/ifCond}} href="#/completed">Completed</a>
+    </li>
+</ul>
+{{#if completed}}
+    <button id="clear-completed" class="clear-completed">Clear completed ({{completed}})</button>
+{{/if}}

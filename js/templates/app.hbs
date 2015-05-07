@@ -1,0 +1,17 @@
+		<section id="todoapp" class="todoapp">
+			<header id="header" class="header">
+				<h1>todos</h1>
+				<input id="new-todo" class="new-todo" placeholder="{{header.placeholder}}" autofocus>
+			</header>
+			<section id="main" class="main">
+				<input id="toggle-all" class="toggle-all" type="checkbox">
+				<label for="toggle-all">Mark all as complete</label>
+				<ul id="todo-list" class="todo-list"></ul>
+			</section>
+			<footer id="footer" class="footer"></footer>
+		</section>
+		<footer id="info" class="info">
+			<p>{{footer.description}}</p>
+			<p>Created by <a href="{{footer.author.url}}">{{footer.author.name}}</a></p>
+			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+		</footer>
