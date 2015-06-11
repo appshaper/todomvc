@@ -1,6 +1,8 @@
 define([
     'appshaper/mvc/view',
-    'appshaper/pubsub'
+    'appshaper/pubsub',
+    'templates',
+    'helpers'
 ], function (
     View,
     Pubsub
